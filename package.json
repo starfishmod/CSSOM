@@ -19,6 +19,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "prepublish": "jake lib/index.js"
+    "prepublish": "jake lib/index.js",
+    "postinstall": "jake --jakefile $(node -e 'console.log(process.cwd() + \"/Jakefile.js\")') --directory $(node -e 'console.log(process.cwd())') lib/index.js"
   }
 }
